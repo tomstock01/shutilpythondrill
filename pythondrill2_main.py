@@ -3,12 +3,13 @@
 # Shutil drill
 
 import shutil
+import os
 
-
-array1 = ['C:/Users/thoma/Desktop/FolderA/doc1.txt','C:/Users/thoma/Desktop/FolderA/doc2.txt',
-          'C:/Users/thoma/Desktop/FolderA/doc3.txt','C:/Users/thoma/Desktop/FolderA/doc4.txt']
+array1 = os.listdir(r'C:\Users\thoma\Desktop\FolderA')
 
 for i in range(len(array1)):
-    shutil.move(array1[i],'C:/Users/thoma/Desktop/FolderB')
+    things = array1[i]
+    stuff = 'C:\\Users\\thoma\\Desktop\\FolderA\\' + things
+    shutil.move(stuff,'C:/Users/thoma/Desktop/FolderB')
     print array1[i]
 
