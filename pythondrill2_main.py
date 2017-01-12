@@ -5,20 +5,10 @@
 import shutil
 
 
+array1 = ['C:/Users/thoma/Desktop/FolderA/doc1.txt','C:/Users/thoma/Desktop/FolderA/doc2.txt',
+          'C:/Users/thoma/Desktop/FolderA/doc3.txt','C:/Users/thoma/Desktop/FolderA/doc4.txt']
 
-shutil.move('C:/Users/thoma/Desktop/FolderA/doc1.txt',
-            'C:/Users/thoma/Desktop/FolderB')
+for i in range(len(array1)):
+    shutil.move(array1[i],'C:/Users/thoma/Desktop/FolderB')
+    print array1[i]
 
-shutil.move('C:/Users/thoma/Desktop/FolderA/doc2.txt',
-            'C:/Users/thoma/Desktop/FolderB')
-
-shutil.move('C:/Users/thoma/Desktop/FolderA/doc3.txt',
-            'C:/Users/thoma/Desktop/FolderB')
-
-shutil.move('C:/Users/thoma/Desktop/FolderA/doc4.txt',
-            'C:/Users/thoma/Desktop/FolderB')
-
-print 'C:/Users/thoma/Desktop/FolderA/doc1.txt'
-print 'C:/Users/thoma/Desktop/FolderA/doc2.txt'
-print 'C:/Users/thoma/Desktop/FolderA/doc3.txt'
-print 'C:/Users/thoma/Desktop/FolderA/doc4.txt'
