@@ -5,16 +5,15 @@
 import shutil
 import os
 
-array1 = os.listdir(r'C:\Users\thoma\Desktop\FolderA')
 
-##for i in range(len(array1)):
-##    #things = array1[i]
-##    stuff = 'C:\\Users\\thoma\\Desktop\\FolderA\\' + array1[i]
-##    shutil.move(stuff,'C:/Users/thoma/Desktop/FolderB')
-##    print stuff
+toFolder = 'C:/Users/thoma/Desktop/FolderB'
+fromFolder = 'C:\\Users\\thoma\\Desktop\\FolderA\\'
 
-for i in array1:
-    #things = array1[i]
-    stuff = 'C:\\Users\\thoma\\Desktop\\FolderA\\' + i
-    shutil.move(stuff,'C:/Users/thoma/Desktop/FolderB')
-    print stuff
+def filetransfer(src, dst):
+    array1 = os.listdir(src)
+    for i in array1:
+        transfiles = src + i
+        shutil.move(transfiles,dst)
+        print transfiles
+
+filetransfer(fromFolder, toFolder)
